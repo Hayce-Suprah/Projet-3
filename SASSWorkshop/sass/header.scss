@@ -1,0 +1,64 @@
+$couleurprimaire: #9356DC;
+$couleursecondaire: #FF79DA;
+$couleurtertiaire: #99E2D0;
+
+.logo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
+
+    img{
+        width: 300px;
+        padding-top: 5px;
+        object-fit: contain;     
+    }    
+}
+.position{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    text-align: center;
+    justify-content: center;
+    width: auto;
+    i{
+        height: 40px;
+        width: 40px;
+        font-size: 1.5em;
+        padding-top: 14px;    
+    }
+    p{
+        font-size: 1.5em;
+    }
+}
+.text{
+
+    h2{
+        text-align: center;
+    }
+
+    h3{
+        opacity: 0.6;
+        text-align: center;
+    }
+}
+.bouton{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    border: 1px solid black;
+    text-decoration: none;
+    padding: 20px;
+    margin-top: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 1em;
+    color: white;
+    box-shadow: 0px 5px 5px 5px rgba(133, 133, 133, 0.24);
+    background: linear-gradient($couleursecondaire, $couleurprimaire);
+
+}
