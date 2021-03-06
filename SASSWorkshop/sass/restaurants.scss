@@ -1,0 +1,130 @@
+.restaurants{
+    @extend .fonctionnement;
+    background-color: rgba(185, 185, 185, 0.363);
+    margin-left: 0;
+    
+}
+.restaurants h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+
+}
+.portfolio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgba(185, 185, 185, 0.363);
+}
+.card_item{
+
+    flex-grow: 1;
+    overflow: hidden;
+    width: 500px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: 0px 5px 5px 5px rgba(133, 133, 133, 0.24);
+
+
+}
+
+.card_photo{
+    position: relative;
+    height: 350px;
+    
+    img{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+    .badge{
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        background-color: $couleurtertiaire;
+        color: green;
+        border-radius: 5px;
+        padding: 10px 20px;
+    }
+}
+.card_text{
+    position: relative;
+    font-size: 1.3em;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     
+    p{
+        margin: 0;
+    }
+
+    .coeur{
+        font-size: 1.1em;
+        border: none;
+        background-color: transparent;    
+    }
+
+    .empty {
+        i{
+            color: black;
+        }
+        &:hover{
+            display: none;
+            opacity: 0;
+        }
+    }
+    
+    .full{
+        display: none;
+        opacity: 0;
+        i{
+            background: linear-gradient($couleursecondaire, $couleurprimaire);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .empty:hover + .full{
+        display: block;
+        opacity: 1;
+    }
+
+
+
+
+}
+
+
+@media screen and (max-width: 1200px){
+    .card_item{
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .portfolio{
+        width: 100%;
+        padding: 0;
+    }
+    .card_item{
+    }
+    .card_photo{
+        height: 200px;
+    }
+    .card_text{
+        
+        p{
+            font-size: 0.8em;
+        }
+
+        .coeur{
+            top: -2px;
+        }
+    }
+}
