@@ -3,7 +3,7 @@
     
 }
 
-.fonctionnement{
+.header_fonctionnement__fonctionnement{
     font-size: 1.5em;
     margin-left: 10px;
     padding-top: 10px;
@@ -13,7 +13,7 @@
     font-weight: bold;
 }
 
-.barre_menu{
+.header_fonctionnement__barre_menu{
     display: flex;
     position: relative;
     margin-left: 30px;
@@ -31,11 +31,10 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     margin-bottom: 40px;
-    background-color: rgba(185, 185, 185, 0.363);
 
-        .barre_menu_numero{
+    .header_fonctionnement__barre_menu_numero{
             position: absolute;
-            top: 22px;
+            top: 26px;
             left: -23px;
             border: 1px solid black;
             width: 25px;
@@ -49,12 +48,16 @@
             background-color: $couleurprimaire;
         }
 
-        .icons{
+        .header_fonctionnement__icons{
             margin-left: 20px;
             padding-top: 20px;
             color: rgba(0, 0, 0, 0.521);
+
+            &.header_fonctionnement__icons:hover{
+                color: $couleurprimaire;
+            }
         }
-        .text_fonctionnement{
+        .header_fonctionnement__text_fonctionnement{
             margin-left: 15px;
             padding-top: 20px;
             font-weight: bold;
@@ -63,20 +66,10 @@
                 position: relative;
                 top: -20px;
                 font-weight: bold;
-            }
-            
-         
-
-body{
-    margin: 0;
-    padding: 0;
-}
+            }   
+        
             
         }
-}
-
-.icons:hover{
-    color: $couleurprimaire;
 }
 
 
@@ -85,13 +78,13 @@ body{
         display: block;
 
 
-            .barre_menu{
+        .header_fonctionnement__barre_menu{
                 width: auto;
                 text-align: center;
                 justify-content: center;
                 align-items: center;
 
-                .text_fonctionnement p{
+                .header_fonctionnement__text_fonctionnement p{
                     top: 0px;
                 }
             }
@@ -100,16 +93,16 @@ body{
 
 @media screen and (max-width: 360px){
 
-    .fonctionnement{
+    .header_fonctionnement__fonctionnement{
         justify-content: left;
         padding-left: 15px;
     }
-    .barre_menu{
+    .header_fonctionnement__barre_menu{
         margin-top: 0;
         margin-right: 20px;
         margin-left: 20px;
 
-        .icons{
+        .header_fonctionnement__icons{
             margin-left: 0;     
         }
     }

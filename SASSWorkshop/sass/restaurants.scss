@@ -1,10 +1,10 @@
 .restaurants{
-    @extend .fonctionnement;
+    @extend .header_fonctionnement__fonctionnement;
     background-color: rgba(185, 185, 185, 0.363);
     margin-left: 0;
     
 }
-.restaurants h2{
+.restaurants__title{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,7 @@
     width: 100%;
     background-color: rgba(185, 185, 185, 0.363);
 }
-.card_item{
+.portfolio__card_item{
 
     flex-grow: 1;
     overflow: hidden;
@@ -33,16 +33,16 @@
 
 }
 
-.card_photo{
+.portfolio__card_photo{
     position: relative;
     height: 350px;
     
-    img{
+    .portfolio__card_image{
         object-fit: cover;
         height: 100%;
         width: 100%;
     }
-    .badge{
+    .portfolio__badge{
         position: absolute;
         top: 20px;
         right: 10px;
@@ -52,7 +52,7 @@
         padding: 10px 20px;
     }
 }
-.card_text{
+.portfolio__card_text{
     position: relative;
     font-size: 1.3em;
     padding: 20px;
@@ -94,15 +94,11 @@
         display: block;
         opacity: 1;
     }
-
-
-
-
 }
 
 
 @media screen and (max-width: 1200px){
-    .card_item{
+    .portfolio__card_item{
         width: auto;
     }
 }
@@ -112,12 +108,12 @@
         width: 100%;
         padding: 0;
     }
-    .card_item{
+    .portfolio__card_item{
     }
-    .card_photo{
+    .portfolio__card_photo{
         height: 200px;
     }
-    .card_text{
+    .portfolio__card_text{
         
         p{
             font-size: 0.8em;

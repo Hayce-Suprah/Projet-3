@@ -16,55 +16,54 @@ body{
     }
 }
 
-.details .image_container{
+.details__image_container{
     height: 600px;
     width: 100%;
 
-        img{
+        .details__image{
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 }
 
-.details .francaise{
+.details__francaise{
     position: relative;
     margin-top: -40px;
     background-color:whitesmoke;
     border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-
-    h1{
-        text-align: center; 
-    }
-    i{
-        font-size: 1.5em;
-    }
-    
+    border-top-right-radius: 40px;   
 }
-.francaise .francaise_titre{
+.details__francaise_titre{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+
+    .details__title{
+        text-align: center;
+    }
+    i{
+        font-size: 1.5em;
+    }
 }
 
- .entree_elements {
+.details__plat_text {
      &:nth-child(1) {
          animation: opa 5s;
     }
      &:nth-child(2) {
-        animation: opa 5s;        
+        animation: opa 8s;        
      }
      &:nth-child(3) {
-        animation: opa 10s;        
+        animation: opa 11s;        
      }
  }
-.entree_text{
+.details__entree_text{
     padding-bottom: 30px;
     padding: 10px;
 
-    h2{  
+    .details__entree_titre{  
         font-size: 1.1em;
         margin-bottom: 30px;
         margin-top: 30px;
@@ -74,7 +73,7 @@ body{
     }
 }
 
-.plat_text{
+.details__plat_text{
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -84,7 +83,7 @@ body{
     background-color: white;
     box-shadow: 0px 5px 5px 5px rgba(133, 133, 133, 0.24);
     
-    .plat{
+    .details__plat{
         padding-left: 20px;
 
         p{
@@ -92,7 +91,7 @@ body{
             padding-top: 5px;  
         }      
     }
-    .prix{
+    .details__prix{
         padding-top: 30px;
         padding-right: 20px;
 
@@ -102,12 +101,11 @@ body{
         }    
     }
 
-    .check{
+    .details__check{
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 20px;
-        color: white;
         background-color: $couleurtertiaire;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
@@ -115,21 +113,24 @@ body{
         opacity: 0;
 
         i{
-            animation: rotate 5s infinite linear;
+            font-size: 1.5em;
+            color: $couleurtertiaire;
+            background-color: white;
+            border-radius: 50%;
+            animation: rotate 6s linear;
+        }
+        &.details__check:hover{
+            animation: width 3s;
+            width: 50px;
+            opacity: 1;
         }
     }
-}
-
-.plat_text .check:hover{
-    animation: width 3s;
-    width: 50px;
-    opacity: 1;
 }
 
 .bouton{
     @extend .bouton;
     padding-top: 50px;
-    background-color: transparent;
+    
 
     .btn{
         padding-right: 60px;
@@ -142,21 +143,21 @@ body{
     .logo{
         padding-bottom: 5px;
 
-        img{
+        .logo__image{
             width: 230px;
         }
     }
     .logo button{
         top: 11px;
     }
-    .details .image_container{
+    .details__image_container{
         height: 400px;
     }
 }
 @media screen and (max-width: 380px){
     .logo{
 
-        img{
+        .logo__image{
             width: 160px;
         }
     }
@@ -172,7 +173,7 @@ body{
     .logo{
         padding-bottom: 5px;
 
-        img{
+        .logo__image{
             width: 160px;
         }
     }
@@ -181,15 +182,15 @@ body{
         top: 17px;
         font-size: 1.1em;
     }
-    .details .image_container{
+    .details__image_container{
         height: 300px;
     }
-    .francaise .francaise_titre{
+    .details__francaise_titre{
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        h1{
+        .details__title{
             font-size: 1.8em;
             font-weight: bold;
             padding-left: 10px;
@@ -199,20 +200,20 @@ body{
             opacity: 0.6;
         }
     }
-    .entree_text{
+    .details__entree_text{
         padding: 10px;
 
-        .entree_titre{
+        .details__entree_titre{
             margin-top: 0;
         }
 
     }
-    .plat_text{
+    .details__plat_text{
         padding-top: 8px;
         padding-bottom: 8px;
         margin-top: 18px;
 
-        .prix{
+        .details__prix{
             position: relative;
             top: -2px;
             left: 8px;
@@ -221,10 +222,10 @@ body{
     .bouton{
         padding-top: 20px;
     }
-    .plat_text p{
+    .details__plat_text p{
         font-size: 0.85em;
     }
-    .logo_footer{
+    .footer__logo_footer{
         width: 100px;
     }
 }
@@ -251,9 +252,9 @@ body{
 
 @keyframes rotate{
     from{
-        transform: rotateX(-180deg);
+        transform: rotateZ(0deg);
     }
     to{
-        transform: rotateX(0deg);
+        transform: rotateZ(360deg);
     }
 }
