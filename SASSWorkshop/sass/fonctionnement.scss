@@ -1,10 +1,10 @@
-.header_fonctionnement{
+.header-fonctionnement{
     display: flex;
     
 }
 
-.header_fonctionnement__fonctionnement{
-    font-size: 1.5em;
+.header-fonctionnement__fonctionnement{
+    font-size: 1.3em;
     margin-left: 10px;
     padding-top: 10px;
     display: flex;
@@ -13,12 +13,12 @@
     font-weight: bold;
 }
 
-.header_fonctionnement__barre_menu{
+.header-fonctionnement__barre-menu{
     display: flex;
     position: relative;
     margin-left: 30px;
-    font-size: 1.2em;
-    border: 1px solid black;
+    font-size: 1.1em;
+    box-shadow: 0px 5px 5px 5px rgba(133, 133, 133, 0.24);
     width: 300px;
     height: 50px;
     margin-top: 50px;
@@ -31,14 +31,15 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     margin-bottom: 40px;
+    background-color: #eaeaea;
 
-    .header_fonctionnement__barre_menu_numero{
+    &__barre-menu-numero{
             position: absolute;
-            top: 26px;
+            display: flex;
+            top: 28px;
             left: -23px;
-            border: 1px solid black;
-            width: 25px;
-            height: 25px;
+            width: 23px;
+            height: 23px;
             border-radius: 100%;
             text-align: center;
             justify-content: center;
@@ -46,18 +47,20 @@
             margin-left: 10px;
             color: white;
             background-color: $couleurprimaire;
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
         }
 
-        .header_fonctionnement__icons{
+        &__icons{
             margin-left: 20px;
             padding-top: 20px;
             color: rgba(0, 0, 0, 0.521);
 
-            &.header_fonctionnement__icons:hover{
+            &:hover{
                 color: $couleurprimaire;
             }
         }
-        .header_fonctionnement__text_fonctionnement{
+        &__text-fonctionnement{
             margin-left: 15px;
             padding-top: 20px;
             font-weight: bold;
@@ -74,36 +77,42 @@
 
 
 @media screen and (max-width: 1200px){
-    .header_fonctionnement{
+
+    .header-fonctionnement{
         display: block;
 
 
-        .header_fonctionnement__barre_menu{
+        &__barre-menu{
                 width: auto;
                 text-align: center;
                 justify-content: center;
                 align-items: center;
 
-                .header_fonctionnement__text_fonctionnement p{
+                &__text-fonctionnement p{
                     top: 0px;
                 }
             }
     }
 }
 
-@media screen and (max-width: 360px){
+@media screen and (max-width: 765px){
 
-    .header_fonctionnement__fonctionnement{
-        justify-content: left;
-        padding-left: 15px;
-    }
-    .header_fonctionnement__barre_menu{
-        margin-top: 0;
-        margin-right: 20px;
-        margin-left: 20px;
+    .header-fonctionnement{
 
-        .header_fonctionnement__icons{
-            margin-left: 0;     
+        &__fonctionnement{
+            justify-content: left;
+            padding-left: 15px;
+            margin-left: 0;
+        }
+
+        &__barre-menu{
+            margin-top: 0;
+            margin-right: 20px;
+            margin-left: 20px;
+    
+            &__icons{
+                margin-left: 0;     
+            }
         }
     }
 }
